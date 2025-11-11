@@ -17,7 +17,7 @@ final class DeleteColumnRevisadorOfOperarios extends AbstractMigration
      * Remember to call "create()" or "update()" and NOT "save()" when working
      * with the Table class.
      */
-    public function change(): void
+    public function up(): void
     {
         $this->execute( 'ALTER TABLE `operarios` DROP COLUMN `revisador`'); 
     }

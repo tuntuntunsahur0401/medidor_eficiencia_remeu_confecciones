@@ -71,8 +71,8 @@ const FormularioLogin = () => {
                     </Form>
                 </Col>
                 <Col lg={6} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}} className="text-primary flex">
-                    <img src={logo} alt="logo" style={{width: '45%', height: '100%'}} className="img-fluid" />
-                    <h6>Alt-Confecciones</h6>
+                    <img src={logo} alt="logo" style={{width: '100%', height: '100%'}} className="img-fluid" />
+                    <h6>Remeu-Confecciones</h6>
                 </Col>
             </Row>
         </Container>

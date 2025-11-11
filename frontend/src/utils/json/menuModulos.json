@@ -1,27 +1,18 @@
 [
     {
-        "label" : "1",
+        "label" : "Modulo 1",
         "value" : 1
     },
     {
-        "label" : "2",
+        "label" : "Modulo 2",
         "value" : 2
     },
     {
-        "label" : "3",
+        "label" : "Auditoría",
         "value" : 3
     },
     {
-        "label" : "4",
-        "value" : 4
-    },
-    {
-        "label" : "Auditoría",
-        "value" : 5
-    },
-    {
         "label" : "Otros",
-        "value" : 6
+        "value" : 4
     }
-
 ]
