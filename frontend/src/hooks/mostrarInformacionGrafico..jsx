@@ -7,6 +7,7 @@ const useMostrarInformacionGrafico = (fecha) => {
     queryFn: () => FetchInformacionGrafico(fecha),
     refetchInterval: 60000
   })
+    console.log(data)
     return { data, status, error, reload: refetch }
 }
 export default useMostrarInformacionGrafico;

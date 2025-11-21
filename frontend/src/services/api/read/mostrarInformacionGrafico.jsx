@@ -12,7 +12,8 @@ const FetchInformacionGrafico = async (fecha = fechaActualDia) => {
             throw new Error(response.data.respuesta || 'Ha ocurrido un error, reinicie, si este persiste, contacte al administrador')
         }
     } catch (error) {
-        console.log(error);
+        console.error(error)
+        throw error
     }
 }
 export default FetchInformacionGrafico;
