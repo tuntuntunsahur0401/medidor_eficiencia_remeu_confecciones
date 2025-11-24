@@ -113,7 +113,7 @@ const TableroGrafico = () => {
             <Col lg={9} xs={12} sm={12} md={4} className=' text-center' >            
               <div style={{display: 'flex', flexDirection: 'column', gap: '0.3rem'}}>
                 <div className="bg-black rounded" style={{display: 'flex', justifyContent: 'center'}}>
-                      <HorizontalBarChart operatorData={operatorData} graphicHeight="700px" />
+                      <HorizontalBarChart operatorData={operatorData} graphicHeight="700px" verticalFontHeight={30} />
                 </div>
                 <div  className="bg-black rounded" style={{display: 'flex', justifyContent: 'center'}}>
                       <HorizontalBarChart operatorData={revisorData} graphicHeight="180px" verticalFontHeight={35} />
