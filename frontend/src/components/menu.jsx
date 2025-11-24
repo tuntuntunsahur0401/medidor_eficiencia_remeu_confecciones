@@ -10,6 +10,7 @@ import FechaActual from '../components/fechaActual';
 let token = localStorage.getItem('token') ?? null;
 const userInfo = token != null ? jwtDecode(token) : null;
 const userRol = userInfo != null ? userInfo.rol : 0;
+
 const items = [
     userRol === 2 || userRol === 9  || userRol === 3 ? {
         label:  <NavLink to="/registro_operaciones" className="noDecorativos">Registrar operaciones</NavLink>,
@@ -126,6 +127,14 @@ const MenuPrincipal = () => {
     }
     setCurrent(key);
   };
+  if(userRol === 1) {
+    return(
+      <div className='border d-flex gap-2'>
+        <NavLink to="/tablero?modulo=1" className="noDecorativos border border-primary rounded p-1">Modulo 1</NavLink>
+        <NavLink to="/tablero?modulo=2" className="noDecorativos border border-primary rounded p-1 ">Modulo 2</NavLink>
+      </div>
+    )
+  }
   return (
         <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
 

@@ -24,7 +24,10 @@ const queryClient = new QueryClient({
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>    
-      <ConfigProvider locale={es_ES} theme={{token: {colorPrimary:'#812323'}}}>
+      <ConfigProvider locale={es_ES} theme={{token: {colorPrimary:'#812323', motionDurationSlow: 0,
+      motionDurationMid: 0,
+      motionDurationFast: 0,
+      motionBase: 0,}}}>
         <App />
       </ConfigProvider>
     </QueryClientProvider>

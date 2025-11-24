@@ -10,13 +10,15 @@ const ActualizarRegistroOperacion = () => {
     const actualizarRegistroOperacion = useCallback(async (values) => {
       let informacion = values ?? {};
         try {
-          const response = await axios.put(`${apiURL}/UPDATE/actualizarRegistroOperacion.php`, informacion);          // Validar estructura de respuesta
+          const response = await axios.put(`${apiURL}/UPDATE/actualizarRegistroOperacion.php`, informacion); 
+          console.log(response)
+          // Validar estructura de respuesta
           if (response.data.ok) {
             setData(response.data.respuesta);
             return response.data.respuesta; // Array garantizado
           } else {
             setError("Ha ocurrido un error: " + response.data.respuesta);
-            return []; // Retornar array vacío
+            throw new Error(response.data.respuesta); // Retornar array vacío
           }
         } catch (error) {
           console.error("Error al realizar la solicitud:", error);

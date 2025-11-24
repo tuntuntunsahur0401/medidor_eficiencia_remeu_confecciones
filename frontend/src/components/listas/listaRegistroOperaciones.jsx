@@ -40,6 +40,7 @@ const ListaRegistroOperaciones = () => {
     }, [mensajeDeExito, mensajeDeAlerta, mensajeDeError]);
     // Función para mostrar el modal
     const showModal = (registro) => {
+        console.log(registro)
         setRegistroSeleccionado(registro)
         setModulo(registro.modulo)
         setVisible(true)
@@ -69,7 +70,8 @@ const ListaRegistroOperaciones = () => {
             "regProd_id" : registroSeleccionado.regProd_id,
             "ref_id": referenciaRef.current.value,
             "unidadesProducidas": unidadesProducidasRef.current.value,
-            "horario": horarioRef.current.value
+            "horario": horarioRef.current.value,
+            "modulo": registroSeleccionado.modulo,
         }
         try {
             await actualizarRegistroOperacion(values);
