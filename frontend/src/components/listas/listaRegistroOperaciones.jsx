@@ -72,6 +72,7 @@ const ListaRegistroOperaciones = () => {
             "unidadesProducidas": unidadesProducidasRef.current.value,
             "horario": horarioRef.current.value,
             "modulo": registroSeleccionado.modulo,
+            "meta" : registroSeleccionado.metaAjustada
         }
         try {
             await actualizarRegistroOperacion(values);
